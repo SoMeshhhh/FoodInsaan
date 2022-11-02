@@ -1,8 +1,8 @@
 from rest_framework import viewsets
 from .Serializer import ProductSerializer
-from .models import Product
+from .models import FoodIssine
 
 
 class ProductViewset(viewsets.ModelViewSet):
-    queryset = Product.objects.all()
+    queryset = FoodIssine.objects.all()
     serializer_class = ProductSerializer

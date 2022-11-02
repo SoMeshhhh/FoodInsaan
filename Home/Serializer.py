@@ -1,8 +1,8 @@
 from dataclasses import fields
 from rest_framework import serializers
-from .models import Product
+from .models import FoodIssine
 
 class ProductSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Product
-        fields = ['id','title','description','time_stamp']
+        model = FoodIssine
+        fields = ['id','name','email','number']

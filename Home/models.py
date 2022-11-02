@@ -1,10 +1,12 @@
 from django.db import models
-import datetime
 
 # Create your models here.
-class Product(models.Model):
-    title = models.CharField(max_length=20)
-    description = models.CharField(max_length=50)
-    time_stamp = datetime.date.today()
+
+
+class FoodIssine(models.Model):
+    name = models.CharField(max_length=20)
+    email = models.EmailField(max_length=50)
+    number = models.CharField(max_length=12)
+
     def __str__(self) -> str:
-        return self.title
+        return self.name

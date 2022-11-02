@@ -78,8 +78,8 @@ WSGI_APPLICATION = 'rest.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': 'Product',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'FoodIssine',
         'HOST': 'localhost',
         'USER': 'postgres',
         'PASSWORD': 'root',
@@ -130,5 +130,4 @@ STATIC_URL = '/static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-import dj_database_url
-DATABASES['default'] = dj_database_url.config(conn_max_age=600)
+# import dj_database_url
